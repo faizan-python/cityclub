@@ -18,7 +18,9 @@
                      <div style="margin-top: 45px;" class="gdlr-space"></div>
                      <div lang="en-US" dir="ltr" id="wpcf7-f4-o1" class="wpcf7" role="form">
                         <div class="screen-reader-response"></div>
+                      
                         <form novalidate="novalidate" class="wpcf7-form" method="post" action="">
+                          {% csrf_token %} 
                            <div style="display: none;">
                               <input type="hidden" value="4" name="_wpcf7">
                               <input type="hidden" value="4.2.2" name="_wpcf7_version">
@@ -73,6 +75,7 @@
 </div>
 
 {% endblock %}
+
 {% block mobile_navigation %}
 <div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation" >
   <button class="dl-trigger">Open Menu</button>
@@ -139,8 +142,8 @@
       <div class="gdlr-navigation-container container">
         <nav class="gdlr-navigation" id="gdlr-main-navigation" role="navigation">
           <ul id="menu-main-menu-1" class="sf-menu gdlr-main-menu">
-            <li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543 gdlr-normal-menu"><a href="{% url 'core_index'%}">Home</a></li>
-            <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435 gdlr-normal-menu">
+            <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435 gdlr-normal-menu"><a href="{% url 'core_index'%}">Home</a></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513 gdlr-mega-menu">
               <a href="{% url 'gallery' %}">Gallery</a>
             </li>
             <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542menu-item menu-item-type-post_type menu-item-object-page menu-item-3542 gdlr-normal-menu"><a href="{% url 'fixture-result'%}">Fixtures &#038; Results</a></li>
@@ -180,7 +183,7 @@
             <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu">
               <a href="{% url 'news-all' %}">News</a>
             </li>
-            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513 gdlr-mega-menu">
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543 gdlr-normal-menu">
               <a href="{% url 'contact-us' %}">Contact US</a>
             </li>
             <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558 gdlr-normal-menu">

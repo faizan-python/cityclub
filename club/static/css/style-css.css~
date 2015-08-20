@@ -1,31 +1,3 @@
-/*
-Theme Name: Real Soccer
-Theme URI: http://themes.goodlayers.com/realsoccer
-Description: Real Soccer Wordpress Theme
-Author: Goodlayers
-Author URI: http://www.goodlayers.com
-Version: 1.03
-License: 
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: white, light, yellow, two-columns, fluid-layout, custom-background, custom-colors, featured-images, theme-options
-Text Domain: gdlr_translate
-*/
-
-/*------------------------------------------------------------------
-[Table of contents]
-
-1. Initiate Css
-	1. Reset
-	2. Wordpress Style ( caption / align style )
-2. Theme Style
-	1. Header
-	2. Sidebar
-	3. Footer
-3.) Content Item
-4.) Widget
-5.) Default Plugin
-6.) Goodlayers Soccer Plugin 
--------------------------------------------------------------------*/
 
 /*--- reset ---*/
 /*--- reset5 Ã‚Â© 2011 opensource.736cs.com MIT ---*/

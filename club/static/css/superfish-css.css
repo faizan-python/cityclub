@@ -19,7 +19,6 @@
 .sf-menu > .gdlr-mega-menu li.sfHover > .sf-mega { display: block; }
 .sf-menu > .gdlr-mega-menu > a { display: block; position: relative; }
 
-/*--- goodlayers skin top level---*/
 .sf-menu{ float: left; }
 .sf-menu > li{ float: left; }
 .sf-menu > li.current-menu-item > a,
@@ -34,7 +33,7 @@
 .sf-menu i{ margin-right: 7px; }
 .sf-menu li li i{ margin-right: 10px; }
 
-/*--- goodlayers skin normal menu ---*/
+
 .sf-menu > .gdlr-normal-menu ul { text-transform: none; letter-spacing: 0px; font-size: 12px; min-width: 190px; *width: 12em; /*- no auto width for IE7 -*/ }
 .sf-menu > .gdlr-normal-menu li { white-space: nowrap; *white-space: normal; /*- for IE7 -*/ }
 .sf-menu > .gdlr-normal-menu li a{ padding: 10px 15px; border-top-width: 1px; border-top-style: solid; zoom: 1; }
@@ -44,7 +43,6 @@
 	right: 10px; border-color: transparent; }
 .sf-menu > .gdlr-normal-menu .sub-menu { border-top-width: 0px; border-top-style: solid; }
 
-/*--- goodlayers skin mega menu ---*/	
 .sf-menu > .gdlr-mega-menu .sf-mega { left: 0px; right: 0px; margin: 0px;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .sf-menu > .gdlr-mega-menu .sf-mega{ border-top-width: 0px; border-top-style: solid; }

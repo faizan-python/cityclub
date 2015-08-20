@@ -255,20 +255,25 @@
     </div>
     <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
       <div class="gdlr-item-title-head">
-        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Twitter Feed</h3>
+        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Upcoming Fixtures</h3>
         <div class="clear"></div>
       </div>
     </div>
     <div class="gdlr-item gdlr-twitter-item"  style="margin-bottom: 60px;"  >
       <div class="flexslider" data-type="carousel" data-columns="1" >
+        {% if upcuming_fixture %}
         <ul class="slides">
+        {% for fixture in upcuming_fixture %}
           <li>
-            Slide1
+          <center>
+          {{fixture.home_team}}<span class="gdlr-result-match-versus">  VS  </span>{{fixture.away_team}}
+            <br>
+            <small>{{fixture.date | date }}</small> 
+            </center>
           </li>
-          <li>
-<!--             <div class="gdlr-twitter" ><span class="gdlr-twitter-text">RT <a href="http://twitter.com/smashingmag" title="Follow smashingmag"  target="_blank"  >@smashingmag</a>: “H.264 still accounts for most video encoding today, but HEVC/H.265 and VP9 are beginning to make noise.” <a href="http://t.co/5DfI…" title="http://t.co/5DfI…"  target="_blank"  >http://t.co/5DfI…</a></span><a class="gdlr-twitter-time" href="http://twitter.com/goodlayers_demo/statuses/580652802373976065" target="_blank" > 122 days ago</a></div> --> Slide 2
-          </li>
+          {% endfor %}
         </ul>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -349,7 +354,7 @@
         </div>
       </div>
       <div class="gdlr-item gdlr-feature-media-item" >
-        <div class="feature-media-thumbnail gdlr-video"><iframe width="620" height="348" src="https://www.youtube.com/embed/AAtjumKj2ec" frameborder="0" allowfullscreen></iframe></div>
+        <div class="feature-media-thumbnail gdlr-video"><iframe width="620" height="348" src="https://www.youtube.com/embed/AAtjumKj2ec " frameborder="0" allowfullscreen></iframe></div>
         <h4 class="feature-media-caption">Classic Videos</h4>
       </div>
     </div>

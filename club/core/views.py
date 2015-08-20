@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
 
 from core.models import (
     Team,
@@ -37,6 +39,7 @@ def index(request):
         i += 1
 
     fixture = Fixtures.objects.all().order_by("date")[:8]
+    upcuming_fixture = Fixtures.objects.filter(game_played=False).order_by("-date")[:3]
     images = Gallery.objects.all()
     players_by_group = get_player_by_group()
     latest_fixtures = Fixtures.objects.all().order_by("date")[:1]
@@ -47,7 +50,8 @@ def index(request):
     	                                      'players_by_group': players_by_group,
                                               'news': news,
                                               'images': images,
-                                              'latest_fixtures': latest_fixtures})
+                                              'latest_fixtures': latest_fixtures,
+                                              'upcuming_fixture': upcuming_fixture})
 
 
 def league_table(request):
@@ -112,6 +116,13 @@ def striker(request):
 
 def contact_us(request):
     players_by_group = get_player_by_group()
+    if request.method == 'POST':
+        email_from = request.POST.get('your-email')
+        name = request.POST.get('your-name')
+        subject = "Contact US" + request.POST.get('your-subject')
+        message = request.POST.get('your-message')
+        send_mail(subject, message, settings.EMAIL_HOST_USER,
+            [email_from], fail_silently=True)
 
     return render(request, 'core/contactus.html', {'players_by_group': players_by_group})
 
@@ -165,3 +176,8 @@ def gallery(request):
     players_by_group = get_player_by_group()
     return render(request, 'core/gallery.html', {'images': images,
                                                  'players_by_group': players_by_group})
+
+
+def page_not_found(request):
+    players_by_group = get_player_by_group()
+    return render(request, 'core/pagenotfound.html', {'players_by_group': players_by_group})
