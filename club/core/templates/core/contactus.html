@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block player-display %}
+
+<div class="with-sidebar-wrapper">
+   <div class="with-sidebar-container container">
+      <div class="with-sidebar-left eight columns">
+         <div class="with-sidebar-content twelve columns">
+            <section id="content-section-2">
+               <div class="section-container container">
+                  <div style="margin-bottom: 60px;" class="gdlr-item gdlr-content-item">
+                     <p></p>
+                     <div class="clear"></div>
+                     <div style="margin-top: -22px;" class="gdlr-space"></div>
+                     <h5 style="font-weight: bold;" class="gdlr-heading-shortcode ">Talk to us!</h5>
+                     <div class="clear"></div>
+                     <div style="margin-top: 45px;" class="gdlr-space"></div>
+                     <div lang="en-US" dir="ltr" id="wpcf7-f4-o1" class="wpcf7" role="form">
+                        <div class="screen-reader-response"></div>
+                        <form novalidate="novalidate" class="wpcf7-form" method="post" action="">
+                           <div style="display: none;">
+                              <input type="hidden" value="4" name="_wpcf7">
+                              <input type="hidden" value="4.2.2" name="_wpcf7_version">
+                              <input type="hidden" value="en_US" name="_wpcf7_locale">
+                              <input type="hidden" value="wpcf7-f4-o1" name="_wpcf7_unit_tag">
+                              <input type="hidden" value="9e34bede97" name="_wpnonce">
+                           </div>
+                           <p>Your Name (required)<br>
+                              <span class="wpcf7-form-control-wrap your-name"><input type="text" aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" size="40" value="" name="your-name"></span> 
+                           </p>
+                           <p>Your Email (required)<br>
+                              <span class="wpcf7-form-control-wrap your-email"><input type="email" aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" size="40" value="" name="your-email"></span> 
+                           </p>
+                           <p>Subject<br>
+                              <span class="wpcf7-form-control-wrap your-subject"><input type="text" aria-invalid="false" class="wpcf7-form-control wpcf7-text" size="40" value="" name="your-subject"></span> 
+                           </p>
+                           <p>Your Message<br>
+                              <span class="wpcf7-form-control-wrap your-message"><textarea aria-invalid="false" class="wpcf7-form-control wpcf7-textarea" rows="10" cols="40" name="your-message"></textarea></span> 
+                           </p>
+                           <p><input type="submit" class="wpcf7-form-control wpcf7-submit" value="Send"><img class="ajax-loader" src="{% static 'image/loader.gif' %}" alt="Sending ..." style="visibility: hidden; opacity: 1;"></p>
+                           <div class="wpcf7-response-output wpcf7-display-none"></div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="clear"></div>
+               </div>
+            </section>
+         </div>
+         <div class="clear"></div>
+      </div>
+      <div class="gdlr-sidebar gdlr-right-sidebar four columns">
+         <div class="gdlr-item-start-content sidebar-right-item">
+            <div class="widget widget_text gdlr-item gdlr-widget" id="text-7">
+               <h3 class="gdlr-widget-title">Contact Information</h3>
+               <div class="clear"></div>
+               <div class="textwidget">
+                  <p>Shankar Sheth Rd, Gultekdi, Pune, Maharashtra 411037</p>
+                  <p><i style="color: #444444; font-size: 16px; " class="gdlr-icon icon-phone"></i> +919822282794 / +919766562329</p>
+                  <p><i style="color: #444444; font-size: 16px; " class="gdlr-icon icon-envelope"></i> cityclub@gmail.com</p>
+                  <p><i style="color: #444444; font-size: 16px; " class="gdlr-icon icon-time"></i> Everyday 9:00-17:00</p>
+               </div>
+            </div>
+            <div class="widget widget_text gdlr-item gdlr-widget" id="text-8">
+               <h3 class="gdlr-widget-title">Social Media</h3>
+               <div class="clear"></div>
+               <div class="textwidget"><a href="#"><i style="color: #444444; font-size: 28px; " class="gdlr-icon icon-facebook"></i></a> <a href="#"><i style="color: #444444; font-size: 28px; " class="gdlr-icon icon-twitter"></i></a> <a href="#"><i style="color: #444444; font-size: 28px; " class="gdlr-icon icon-dribbble"></i></a> <a href="#"><i style="color: #444444; font-size: 28px; " class="gdlr-icon icon-pinterest"></i></a> <a href="#"><i style="color: #444444; font-size: 28px; " class="gdlr-icon icon-google-plus"></i></a> <a href="#"><i style="color: #444444; font-size: 28px; " class="gdlr-icon icon-instagram"></i></a></div>
+            </div>
+         </div>
+      </div>
+      <div class="clear"></div>
+   </div>
+</div>
+
+{% endblock %}
+{% block mobile_navigation %}
+<div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation" >
+  <button class="dl-trigger">Open Menu</button>
+  <ul id="menu-main-menu" class="dl-menu gdlr-main-mobile-menu">
+    <li id="menu-item-3543" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543"><a href="{% url 'core_index' %}">Home</a></li>
+    <li id="menu-item-3435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435">
+      <a href="{% url 'gallery' %}">Gallery</a></li>
+      <li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="{% url 'fixture-result' %}">Fixtures &#038; Results</a></li>
+      <li id="menu-item-3541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3541"><a href="{% url 'league-table' %}">League Table</a></li>
+      <li id="menu-item-3540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3540">
+        <li id="menu-item-3534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534"><a href="{% url 'team' %}">Team</a>
+          <ul class="dl-submenu">
+            <li id="menu-item-3419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3419"><a href="{% url 'team' %}">Goalkeeper</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.0 %}
+                <li id="menu-item-3468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3420"><a href="{% url 'defender' %}">Defenders</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.1 %}
+                <li id="menu-item-3459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3421"><a href="{% url 'midfielder' %}">Midfielders</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.2 %}
+                <li id="menu-item-3461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3428"><a href="{% url 'striker' %}">Strikers</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.3 %}
+                <li id="menu-item-3532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3532"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </li>
+      <li id="menu-item-3534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534">
+        <a href="{% url 'news-all' %}">News</a></li>      
+        <li id="menu-item-3513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513">
+          <a href="{% url 'contact-us' %}">Contact Us</a>
+        </li>
+        <li id="menu-item-3558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558">
+          <a href="">Shop</a>
+          <ul class="dl-submenu">
+            <li id="menu-item-3515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3515"><a href="">Coming Soon</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    {% endblock %}
+
+    {% block navigation %}
+    <!-- navigation -->
+    <div class="gdlr-navigation-wrapper">
+      <div class="gdlr-navigation-container container">
+        <nav class="gdlr-navigation" id="gdlr-main-navigation" role="navigation">
+          <ul id="menu-main-menu-1" class="sf-menu gdlr-main-menu">
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543 gdlr-normal-menu"><a href="{% url 'core_index'%}">Home</a></li>
+            <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435 gdlr-normal-menu">
+              <a href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542menu-item menu-item-type-post_type menu-item-object-page menu-item-3542 gdlr-normal-menu"><a href="{% url 'fixture-result'%}">Fixtures &#038; Results</a></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3541menu-item menu-item-type-post_type menu-item-object-page menu-item-3541 gdlr-normal-menu"><a href="{% url 'league-table' %}">League Table</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu"><a href="{% url 'team' %}" class="sf-with-ul">Team</a><div class="sf-mega" style="display: none;">
+
+              <div class="sf-mega-section three columns first-column" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3419" style="height: 198px;"><a href="{% url 'team' %}">Goalkeepers</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.0 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3420" style="height: 198px;"><a href="{% url 'defender' %}">Defenders</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.1 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3421" style="height: 198px;"><a href="{% url 'midfielder' %}">Midfielders</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.2 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3428" style="height: 198px;"><a href="{% url 'striker' %}">Strikers</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.3 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3532"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+
+            </div></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu">
+              <a href="{% url 'news-all' %}">News</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513 gdlr-mega-menu">
+              <a href="{% url 'contact-us' %}">Contact US</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558 gdlr-normal-menu">
+              <a href="#">Shop</a>
+              <ul class="sub-menu">
+                <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3515"><a href="#">Coming Soon</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <i class="icon-search gdlr-menu-search-button" id="gdlr-menu-search-button" ></i>
+        <div class="gdlr-menu-search" id="gdlr-menu-search">
+          <form method="get" id="searchform" action="#">
+            <div class="search-text">
+              <input type="text" value="Type Keywords" name="s" autocomplete="off" data-default="Type Keywords" />
+            </div>
+            <input type="submit" value="" />
+            <div class="clear"></div>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    {% endblock %}
+    {% block images_slide%}
+<div  class="ms-slide" data-delay="7" data-fill-mode="fill"  >
+   <img src="" alt="" title="" data-src="{% static 'image/city.jpg'%}" />
+</div>
+<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
+   <img src="" alt="" title="" data-src="{% static 'image/city2.jpg'%}" />
+</div>
+<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
+   <img src="" alt="" title="" data-src="{% static 'image/city3.jpg'%}" />
+</div>
+
+{% endblock %}

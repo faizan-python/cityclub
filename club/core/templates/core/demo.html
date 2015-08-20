@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block mobile_navigation %}
+<div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation" >
+  <button class="dl-trigger">Open Menu</button>
+  <ul id="menu-main-menu" class="dl-menu gdlr-main-mobile-menu">
+    <li id="menu-item-3543" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543"><a href="{% url 'core_index' %}">Home</a></li>
+    <li id="menu-item-3435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435">
+      <a href="{% url 'gallery' %}">Gallery</a></li>
+      <li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="{% url 'fixture-result' %}">Fixtures &#038; Results</a></li>
+      <li id="menu-item-3541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3541"><a href="{% url 'league-table' %}">League Table</a></li>
+      <li id="menu-item-3540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3540">
+        <li id="menu-item-3534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534"><a href="{% url 'team' %}">Team</a>
+          <ul class="dl-submenu">
+            <li id="menu-item-3419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3419"><a href="{% url 'team' %}">Goalkeeper</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.0 %}
+                <li id="menu-item-3468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3420"><a href="{% url 'defender' %}">Defenders</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.1 %}
+                <li id="menu-item-3459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3421"><a href="{% url 'midfielder' %}">Midfielders</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.2 %}
+                <li id="menu-item-3461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3428"><a href="{% url 'striker' %}">Strikers</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.3 %}
+                <li id="menu-item-3532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3532"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </li>
+      <li id="menu-item-3534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534">
+        <a href="{% url 'news-all' %}">News</a></li>      
+        <li id="menu-item-3513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513">
+          <a href="{% url 'contact-us' %}">Contact Us</a>
+        </li>
+        <li id="menu-item-3558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558">
+          <a href="">Shop</a>
+          <ul class="dl-submenu">
+            <li id="menu-item-3515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3515"><a href="">Coming Soon</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    {% endblock %}
+
+    {% block navigation %}
+    <!-- navigation -->
+    <div class="gdlr-navigation-wrapper">
+      <div class="gdlr-navigation-container container">
+        <nav class="gdlr-navigation" id="gdlr-main-navigation" role="navigation">
+          <ul id="menu-main-menu-1" class="sf-menu gdlr-main-menu">
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543 gdlr-normal-menu"><a href="{% url 'core_index'%}">Home</a></li>
+            <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435 gdlr-normal-menu">
+              <a href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542menu-item menu-item-type-post_type menu-item-object-page menu-item-3542 gdlr-normal-menu"><a href="{% url 'fixture-result'%}">Fixtures &#038; Results</a></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3541menu-item menu-item-type-post_type menu-item-object-page menu-item-3541 gdlr-normal-menu"><a href="{% url 'league-table' %}">League Table</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu"><a href="{% url 'team' %}" class="sf-with-ul">Team</a><div class="sf-mega" style="display: none;">
+
+              <div class="sf-mega-section three columns first-column" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3419" style="height: 198px;"><a href="{% url 'team' %}">Goalkeepers</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.0 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3420" style="height: 198px;"><a href="{% url 'defender' %}">Defenders</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.1 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3421" style="height: 198px;"><a href="{% url 'midfielder' %}">Midfielders</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.2 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3428" style="height: 198px;"><a href="{% url 'striker' %}">Strikers</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.3 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3532"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+
+            </div></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu">
+              <a href="{% url 'news-all' %}">News</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513 gdlr-mega-menu">
+              <a href="{% url 'contact-us' %}">Contact US</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558 gdlr-normal-menu">
+              <a href="#">Shop</a>
+              <ul class="sub-menu">
+                <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3515"><a href="#">Coming Soon</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <i class="icon-search gdlr-menu-search-button" id="gdlr-menu-search-button" ></i>
+        <div class="gdlr-menu-search" id="gdlr-menu-search">
+          <form method="get" id="searchform" action="#">
+            <div class="search-text">
+              <input type="text" value="Type Keywords" name="s" autocomplete="off" data-default="Type Keywords" />
+            </div>
+            <input type="submit" value="" />
+            <div class="clear"></div>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    {% endblock %}
+
+    {% block header_length %}
+    <div id="gdlr-header-substitute"></div>
+    {% endblock %}
+    {% block images_slide%}
+    <div  class="ms-slide" data-delay="7" data-fill-mode="fill"  >
+      <img src="" alt="" title="" data-src="{% static 'image/city.jpg'%}" />
+    </div>
+    <div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
+      <img src="" alt="" title="" data-src="{% static 'image/city2.jpg'%}" />
+</div>
+<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
+  <img src="" alt="" title="" data-src="{% static 'image/city3.jpg'%}" />
+</div>
+
+{% endblock %}
+
+{% block section-2%}
+{% if latest_fixtures %}
+{% for latest_fixture in latest_fixtures %}
+<div class="upcoming-match-item-wrapper gdlr-item"  style="margin-bottom: 0px;"  >
+  <div class="upcoming-match-overlay"></div>
+  <div class="gdlr-upcoming-match-team-wrapper"><span class="gdlr-upcoming-match-team gdlr-left">{{latest_fixture.home_team}}</span><span class="gdlr-upcoming-match-versus">{{latest_fixture.goal_scored_home}} - {{latest_fixture.goal_scored_away}}</span><span class="gdlr-upcoming-match-team gdlr-right">{{latest_fixture.away_team}}</span></div>
+  <span class="match-result-info-wrapper"><span class="upcoming-match-info-overlay"></span><span class="match-result-info"><i class="icon-calendar"></i>{{ latest_fixture.date }}</span><span class="match-result-info"><i class="icon-location-arrow"></i>Bishops Camp</span></span>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block news%}
+<div class="section-container container">
+  <div class="eight columns" >
+    <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
+      <div class="gdlr-item-title-head">
+        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Recent News</h3>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="blog-item-wrapper"   style="margin-bottom: 20px;" >
+      <div class="blog-item-holder">
+        <div class="gdlr-isotope" data-type="blog" data-layout="fitRows" >
+          <div class="clear"></div>
+          {% for new in news %}
+
+          <div class="six columns">
+            <div class="gdlr-item gdlr-blog-grid">
+              <div class="gdlr-ux gdlr-blog-grid-ux">
+                <article id="post-859" class="post-859 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-fit-row category-life-style">
+                  <div class="gdlr-standard-style">
+                    <div class="gdlr-blog-thumbnail">
+                      <a href="" alt="" width="750" height="360" />
+                        <img src="{{ new.picture.url }}" alt="" width="750" height="360" />
+                      </a>
+                      <div class="gdlr-sticky-banner"><i class="icon-bullhorn" ></i>Sticky Post</div>
+                    </div>
+                    <header class="post-header">
+                      <h3 class="gdlr-blog-title"><a href="{% url 'news' new.id  %}" style="font-size: 15px;">{{new.title}}</a></h3>
+                      <div class="gdlr-blog-info gdlr-info">
+                        <div class="blog-info blog-date"><i class="icon-calendar"></i><a href="#">{{new.date}}</a></div>
+                        <div class="blog-info blog-author"><i class="icon-user"></i><a href="#" title="Posts by John Smith" rel="author">{{new.author}}</a></div>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="clear"></div>
+                    </header>
+                    <!-- entry-header -->
+                    <div class="gdlr-blog-content">
+                      {{new.content|slice:":100" }}
+                      <div class="clear"></div>
+                      <a href="{% url 'news' new.id  %}">Read More</a>
+                      <div class="blog-info blog-comment"><i class="icon-comments"></i><a href="#" >0</a></div>
+                    </div>
+                  </div>
+                </article>
+                <!-- #post -->
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+
+  {% block league-table%}
+  <div class="four columns" >
+    <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
+      <div class="gdlr-item-title-head">
+        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">League Table</h3>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="gdlr-item gdlr-league-table-item"  style="margin-bottom: 60px;"  >
+      <table class="gdlr-small-league-table" >
+        <tr class="gdlr-table-second-head">
+          <th class="gdlr-table-team">Team</th>
+          <th class="gdlr-table-score">W</th>
+          <th class="gdlr-table-score">D</th>
+          <th class="gdlr-table-score">L</th>
+          <th class="gdlr-table-score">PTS</th>
+        </tr>
+        {% if team_point_table%}
+        {% for team in team_point_table%}
+        <tr>
+          <td class="gdlr-table-team"><span class="team-count">{{team.position}}</span> {{team.name}}</td>
+          <td class="gdlr-table-score">{{team.game_won}}</td>
+          <td class="gdlr-table-score">0</td>
+          <td class="gdlr-table-score">{{team.game_lost}}</td>
+          <td class="gdlr-table-score gdlr-table-pts">{{team.points}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+      </table>
+      <a class="gdlr-full-table-link gdlr-button with-border" href="{% url 'league-table' %}">View Full Table</a>
+    </div>
+    <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
+      <div class="gdlr-item-title-head">
+        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Twitter Feed</h3>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="gdlr-item gdlr-twitter-item"  style="margin-bottom: 60px;"  >
+      <div class="flexslider" data-type="carousel" data-columns="1" >
+        <ul class="slides">
+          <li>
+            Slide1
+          </li>
+          <li>
+<!--             <div class="gdlr-twitter" ><span class="gdlr-twitter-text">RT <a href="http://twitter.com/smashingmag" title="Follow smashingmag"  target="_blank"  >@smashingmag</a>: “H.264 still accounts for most video encoding today, but HEVC/H.265 and VP9 are beginning to make noise.” <a href="http://t.co/5DfI…" title="http://t.co/5DfI…"  target="_blank"  >http://t.co/5DfI…</a></span><a class="gdlr-twitter-time" href="http://twitter.com/goodlayers_demo/statuses/580652802373976065" target="_blank" > 122 days ago</a></div> --> Slide 2
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+
+  {% block player-display%}
+  {% if players%}
+
+  <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin"  id="gdlr-parallax-wrapper-1" data-bgspeed="0.1" style="background-image: url({% static 'image/background_player_list_index.jpg' %}); padding-top: 80px; padding-bottom: 00px; " >
+    <div class="container">
+      <div class="player-item-wrapper"  data-ajax="" >
+        <div class="gdlr-item-title-wrapper gdlr-item pos-left gdlr-nav-container ">
+          <div class="gdlr-item-title-head">
+            <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Players</h3>
+            <a class="gdlr-item-title-link" href="{% url 'team' %}" >View All Players</a>
+            <div class="gdlr-title-navigation"><i class="icon-angle-left gdlr-flex-prev"></i><i class="icon-angle-right gdlr-flex-next"></i></div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="player-item-holder">
+          <div class="gdlr-item gdlr-classic-player-carousel-wrapper">
+            <div class="flexslider" data-type="carousel" data-nav-container="player-item-holder" data-columns="4" >
+              <ul class="slides" >
+                {% for player in players%}
+                <li class="gdlr-item gdlr-classic-player">
+                  <div class="gdlr-soccer-player-thumbnail"><a href="{% url 'user_details' player.id  %}" data-rel="fancybox" ><img src="{{ player.picture.url }}" alt="" width="400" height="400" /></a></div>
+                  <div class="gdlr-classic-player-item-content">
+                    <div class="gdlr-soccer-player-squad gdlr-title-font gdlr-skin-info" >{{player.id}}</div>
+                    <div class="gdlr-soccer-player-title-wrapper">
+                      <h3 class="gdlr-soccer-player-title gdlr-skin-title"><a href="{% url 'user_details' player.id  %}" >{{player.name}}</a></h3>
+                      <div class="gdlr-soccer-player-position gdlr-skin-info">{{player.position}}</div>
+                    </div>
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  {%endif%}
+  {% endblock %}
+
+  {% block fixtures %}
+  <div class="section-container container">
+    <div class="four columns" >
+      <div class="fixture-result-item-wrapper"  style="margin-bottom: 75px;"  data-ajax="" >
+        <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
+          <div class="gdlr-item-title-head">
+            <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Fixtures & Results</h3>
+            <div class="clear"></div>
+          </div>
+        </div>
+        {% if fixtures %}
+        <div class="fixture-result-item-holder" >
+          <div class="gdlr-small-result-wrapper gdlr-item">
+            {% for fixture in fixtures %}
+            <div class="small-result-item odd"><span class="gdlr-result-match-team gdlr-left">{{fixture.home_team }}<span class="gdlr-result-match-score"> {{ fixture.goal_scored_home }}</span></span><span class="gdlr-result-match-versus">VS</span><span class="gdlr-result-match-team gdlr-right"><span class="gdlr-result-match-score"> {{ fixture.goal_scored_away }} </span>{{fixture.away_team }}</span></div>
+            {% endfor %}
+            <a class="gdlr-full-result-link gdlr-button with-border" href="{% url 'fixture-result' %}">View All Fixtures</a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="eight columns" >
+      <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
+        <div class="gdlr-item-title-head">
+          <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Featured Video</h3>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="gdlr-item gdlr-feature-media-item" >
+        <div class="feature-media-thumbnail gdlr-video"><iframe width="620" height="348" src="https://www.youtube.com/embed/AAtjumKj2ec" frameborder="0" allowfullscreen></iframe></div>
+        <h4 class="feature-media-caption">Classic Videos</h4>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+
+    <!--   Gallery    Block  -->
+    <div class="gdlr-item-title-wrapper gdlr-item pos-left ">
+      <div class="gdlr-item-title-head">
+        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Gallery</h3>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="portfolio-item-wrapper type-modern-portfolio"  style="margin-bottom: 25px;" >
+      <div class="portfolio-item-holder  gdlr-portfolio-column-4">
+        <div class="gdlr-isotope" data-type="portfolio" data-layout="fitRows" >
+          <div class="clear"></div>
+          {% for image in images %}
+          <div class="three columns">
+            <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+              <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                <div id="logo" class="portfolio-thumbnail gdlr-image"><img src="{{ image.picture.url }}" alt="" width="400" height="300" /><a class="portfolio-overlay-wrapper"  href="{{ image.picture.url }}"  ><span class="portfolio-overlay" >&nbsp;</span><span class="portfolio-icon" ></span><i class="icon-link" ></i></a></div>
+                <h3 class="portfolio-title"><a  href=""  >{{ image.picture_name }}</a></h3>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  {% endblock %}

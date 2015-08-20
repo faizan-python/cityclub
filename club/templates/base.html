@@ -1,0 +1,298 @@
+{% load staticfiles %}
+
+    <html lang="en-US">
+      <!--<![endif]-->
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale = 1.0" />
+        <title>Real Soccer  </title>
+        <script type="text/javascript">
+          window._wpemojiSettings = {"baseUrl":"{% static 'js/twemoji-min.js'%}"};
+          !function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+        </script>
+        <style type="text/css">
+          img.wp-smiley,
+          img.emoji {
+          display: inline !important;
+          border: none !important;
+          box-shadow: none !important;
+          height: 1em !important;
+          width: 1em !important;
+          margin: 0 .07em !important;
+          vertical-align: -0.1em !important;
+          background: none !important;
+          padding: 0 !important;
+          }
+        </style>
+        <link rel='stylesheet' id='contact-form-7-css'  href="{% static 'css/contact-form-7-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='woocommerce-layout-css'  href="{% static 'css/woocommerce-layout-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='woocommerce-smallscreen-css'  href="{% static 'css/woocommerce-smallscreen-css.css' %}" type='text/css' media='only screen and (max-width: 768px)' />
+        <link rel='stylesheet' id='woocommerce-general-css'  href="{% static 'css/woocommerce-general-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='style-css'  href="{% static 'css/style-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='Open-Sans-Condensed-google-font-css'  href="{% static 'css/Open-Sans-Condensed-google-font-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='Open-Sans-google-font-css'  href="http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&subset=greek%2Ccyrillic-ext%2Ccyrillic%2Clatin%2Clatin-ext%2Cvietnamese%2Cgreek-ext&ver=4.2.3" type='text/css' media='all' />
+        <link rel='stylesheet' id='ABeeZee-google-font-css'  href="http://fonts.googleapis.com/css?family=ABeeZee%3Aregular%2Citalic&subset=latin&ver=4.2.3" type='text/css' media='all' />
+        <link rel='stylesheet' id='superfish-css'  href="{% static 'css/superfish-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='dlmenu-css'  href="{% static 'css/dlmenu-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css'  href="{% static 'css/font-awesome-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='jquery-fancybox-css'  href="{% static 'css/jquery-fancybox-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='flexslider-css'  href="{% static 'css/flexslider-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='style-responsive-css'  href="{% static 'css/style-responsive-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='style-custom-css'  href="{% static 'css/style-custom-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='gdlr-woo-style-css'  href="{% static 'css/gdlr-woo-style-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='ms-main-css'  href="{% static 'css/ms-main-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='ms-custom-css'  href="{% static 'css/ms-custom-css.css' %}" type='text/css' media='all' />
+        <link rel='stylesheet' id='wpgmaps-style-css'  href="{% static 'css/wpgmaps-style-css.css' %}" type='text/css' media='all' />
+        <script type='text/javascript' src="{% static 'js/jquert-main-1.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-2.js' %}"></script>
+        <meta name="generator" content="MasterSlider 2.18.2 - Responsive Touch Image Slider" />
+
+        <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+        <style type="text/css">.broken_link, a.broken_link {
+          text-decoration: line-through;
+          }
+        </style>
+        <script type="text/javascript">
+          (function(url){
+          if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+          var wfscr = document.createElement('script');
+          wfscr.type = 'text/javascript';
+          wfscr.async = true;
+          wfscr.src = url + '&r=' + Math.random();
+          (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+          })('//demo.goodlayers.com/realsoccer/wp-admin/admin-ajax.php?action=wordfence_logHuman&hid=7EBC844D52E11B927E62B5156C5C795E');
+        </script>
+      </head>
+      <body class="home page page-id-3220 page-template-default _masterslider _msp_version_2.18.2">
+        <div class="body-wrapper  float-menu" >
+        <script type="text/javascript">
+          jQuery(document).ready(function(){
+            jQuery('.option-inactive').live("click",function() {
+                jQuery(this).parent().animate({
+                    marginLeft: "0px"
+                }); 
+                jQuery(this).removeClass('option-inactive');
+                jQuery(this).addClass('option-active');
+            });
+            jQuery('.option-active').live("click",function() {
+                jQuery(this).parent().animate({
+                    marginLeft: "-192px"
+                }); 
+                jQuery(this).removeClass('option-active');
+                jQuery(this).addClass('option-inactive');
+            });
+            
+            jQuery('.theme-option select').change(function(){
+                window.location.href = jQuery(this).val();
+            });         
+          });
+          
+        </script>
+        <div class="body-wrapper  float-menu">
+
+<!--         Should be in header file -->
+
+          <header class="gdlr-header-wrapper gdlr-no-height"  >
+            <!-- top navigation -->
+            <div class="top-navigation-wrapper">
+              <div class="top-navigation-container container">
+                <div class="top-navigation-left">
+                  <div class="top-navigation-left-text">
+                    <img src="{% static 'image/heineken.png' %}" alt="" /><img src="{% static 'image/puma.png' %}" alt="" />          
+                  </div>
+                </div>
+                <div class="top-navigation-right">
+                  <div class="top-social-wrapper">
+                    <div class="social-icon">
+                      <a href="#" target="_blank" >
+                      <img width="32" height="32" src="{% static 'image/facebook.png'%}" alt="Facebook" />
+                      </a>
+                    </div>
+                    <div class="social-icon">
+                      <a href="#" target="_blank" >
+                      <img width="32" height="32" src="{% static 'image/pinterest.png'%}" alt="Pinterest" />
+                      </a>
+                    </div>
+                    <div class="social-icon">
+                      <a href="#" target="_blank" >
+                      <img width="32" height="32" src="{% static 'image/twitter.png' %}" alt="Twitter" />
+                      </a>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <!-- logo -->
+            <div class="gdlr-header-inner">
+              <div class="gdlr-header-container container">
+                <!-- logo -->
+                <div class="gdlr-logo">
+                  <a href="" >
+                  <img src="" alt=""  />            
+                  </a>
+                  {% block mobile_navigation %}
+                  {% endblock %}
+                </div>
+                {% block navigation%}
+
+                {% endblock %}
+                <div id="gdlr-header-substitute" ></div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            {% block title %}
+
+            {% endblock %}
+            <div class="clear"></div>
+          </header>
+
+<!--           Header file ends here -->
+
+<!--           SUb header -->
+
+          <div class="content-wrapper">
+            <div class="gdlr-content">
+              <!-- Above Sidebar Section-->
+              <!-- Sidebar With Content Section-->
+              <div class="with-sidebar-wrapper">
+                <section id="content-section-1" >
+                  <div class="gdlr-full-size-wrapper gdlr-show-all"  style="padding-bottom: 0px;  background-color: #ffffff; "  >
+                    <div class="gdlr-master-slider-item gdlr-slider-item gdlr-item"  style="margin-bottom: 0px;"  >
+                      <!-- MasterSlider -->
+                      <div id="P_MS55b49119b279a" class="master-slider-parent ms-parent-id-1"  >
+                        <!-- MasterSlider Main -->
+                        <div id="MS55b49119b279a" class="master-slider ms-skin-default" >
+                          {% block images_slide %}
+
+                          {%endblock%}
+                        </div>
+                        <!-- END MasterSlider Main -->
+                      </div>
+                      <!-- END MasterSlider -->
+                      <script>
+                        (function ( $ ) {
+                          "use strict";
+                        
+                          $(function () {
+                            var masterslider_279a = new MasterSlider();
+                        
+                            // slider controls
+                            masterslider_279a.control('arrows'     ,{ autohide:true, overVideo:true  });        masterslider_279a.control('bullets'    ,{ autohide:false, overVideo:true, dir:'h', align:'bottom', space:6 , margin:15  });
+                            // slider setup
+                            masterslider_279a.setup("MS55b49119b279a", {
+                                width           : 1180,
+                                height          : 820,
+                                minHeight       : 0,
+                                space           : 0,
+                                start           : 1,
+                                grabCursor      : true,
+                                swipe           : true,
+                                mouse           : false,
+                                keyboard        : false,
+                                layout          : "fullwidth",
+                                wheel           : false,
+                                autoplay        : true,
+                                instantStartLayers:true,
+                                loop            : true,
+                                shuffle         : false,
+                                preload         : 0,
+                                heightLimit     : true,
+                                autoHeight      : false,
+                                smoothHeight    : true,
+                                endPause        : false,
+                                overPause       : true,
+                                fillMode        : "fill",
+                                centerControls  : true,
+                                startOnAppear   : false,
+                                layersMode      : "center",
+                                autofillTarget  : "",
+                                hideLayers      : true,
+                                fullscreenMargin: 0,
+                                speed           : 20,
+                                dir             : "h",
+                                parallaxMode    : 'swipe',
+                                view            : "fade"
+                            });
+                        
+                        
+                            
+                            $("head").append( "<link rel='stylesheet' id='ms-fonts'  href='//fonts.googleapis.com/css?family=Open+Sans Condensed:700,300|Open+Sans:800' type='text/css' media='all' />" );
+                        
+                            window.masterslider_instances = window.masterslider_instances || [];
+                            window.masterslider_instances.push( masterslider_279a );
+                           });
+                        
+                        })(jQuery);
+                      </script>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+                </section>
+                <section id="content-section-2" >
+                  <div class="gdlr-full-size-wrapper gdlr-show-all"  style="padding-bottom: 0px;  border-top: 3px solid #842b2c;  background-color: #ffffff; "  >
+                {% block section-2%}
+
+                {% endblock %}
+                  </div>
+                  <div class="clear"></div>
+                </section>
+
+                <section id="content-section-3" >
+          
+                {% block news%}
+
+                {% endblock %}
+                  
+
+                {% block league-table%}
+
+                {% endblock %}
+                <div class="clear"></div>
+                  </div>
+                </section>
+                <section id="content-section-4">
+                {% block player-display %}
+                
+                {% endblock %}
+
+                </section>
+                <section id="content-section-5">
+                {% block fixtures %}
+                
+                {% endblock %}
+
+                </section>
+                </div>
+                </div>
+          </div>    
+<!--           SUb header ends here -->
+          </div>
+
+
+      {% include 'footer.html' %}  
+        </div>
+        <script type='text/javascript' src="{% static 'js/jquery-min-4.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-16.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-15.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-14.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-13.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-12.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-11.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-10.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-9.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-8.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-7.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-6.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-5.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-4.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery-main-3.js' %}"></script>
+      </body>
+    </html>
+    <!-- Dynamic page generated in 0.457 seconds. -->
+    <!-- Cached page generated by WP-Super-Cache on 2015-07-26 07:49:45 -->
+    <!-- super cache -->
+

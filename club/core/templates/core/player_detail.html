@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block images_slide%}
+<div  class="ms-slide" data-delay="7" data-fill-mode="fill"  >
+	<img src="" alt="" title="" data-src="{% static 'image/city.jpg'%}" />
+</div>
+<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
+	<img src="" alt="" title="" data-src="{% static 'image/city2.jpg'%}" />
+</div>
+<div  class="ms-slide" data-delay="3" data-fill-mode="fill"  >
+	<img src="" alt="" title="" data-src="{% static 'image/city3.jpg'%}" />
+</div>
+
+{% endblock %}
+
+
+{% block news %}
+
+
+<div class="content-wrapper"><div class="gdlr-content">
+
+	<div class="single-player">
+		<!-- player info -->
+		<div class="gdlr-soccer-player-general-info-wrapper">
+			<div class="gdlr-soccer-player-general-info-container container">
+				<div class="gdlr-soccer-player-general-info-inner gdlr-item">
+					<div class="gdlr-soccer-player-general-info-left">
+						<div class="gdlr-soccer-player-general-info-left-overlay"></div>
+						<div class="gdlr-soccer-player-thumbnail"><a href="{{ player.picture.url }}" data-rel="fancybox" ><img src="{{ player.picture.url }}" alt="" width="150" height="150" /></a></div>					<h1 class="gdlr-soccer-player-title">{{ player.name}}</h1>
+						<h4 class="gdlr-soccer-player-title-info">
+							<span class="gdlr-soccer-player-squad" >{{player.jersey_number}}</span>
+							<span class="gdlr-soccer-player-position" >{{player.position}}</span>
+						</h4>
+					</div>
+					<div class="gdlr-soccer-player-general-info-right-wrapper">
+						<div class="gdlr-soccer-player-general-info-right-inner">
+							<div class="gdlr-soccer-player-general-info-right"><span class="gdlr-soccer-head">Nationality :</span><span class="gdlr-soccer-tail">{{ player.nationality}}</span></div><div class="gdlr-soccer-player-general-info-right"><span class="gdlr-soccer-head">Date Of Birth :</span><span class="gdlr-soccer-tail">{{player.dob}}</span></div><div class="gdlr-soccer-player-general-info-right"><span class="gdlr-soccer-head">Height :</span><span class="gdlr-soccer-tail">{{ player.height }}</span></div><div class="gdlr-soccer-player-general-info-right"><span class="gdlr-soccer-head">Weight :</span><span class="gdlr-soccer-tail">{{ player.weight }}</span></div>					</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 	player ends here -->
+
+		<div class="gdlr-soccer-player-tab-title-wrapper">
+			<div class="gdlr-soccer-player-tab-title-container container">
+				<div class="gdlr-soccer-player-tab-title-inner gdlr-item gdlr-title-font">
+					<a data-tab="player-stats" href="#" class="gdlr-soccer-tab active">Player Stats</a> 
+				</div>
+
+				<div class="gdlr-soccer-player-social-wrapper">
+					<div class="social-icon">
+						<a target="_blank" href="#">
+							<img width="32" height="32" alt="facebook" src="{% static 'image/facebook2.png' %}" style="opacity: 1;">
+						</a>
+					</div>
+					<div class="social-icon">
+						<a target="_blank" href="#">
+							<img width="32" height="32" alt="twitter" src="{% static 'image/twitter2.png' %}" style="opacity: 1;">
+						</a>
+					</div>
+					<div class="social-icon">
+						<a target="_blank" href="#">
+							<img width="32" height="32" alt="instagram" src="{% static 'image/instagram.png' %}" style="opacity: 1;">
+						</a>
+					</div>
+					<div class="social-icon">
+						<a target="_blank" href="#">
+							<img width="32" height="32" alt="youtube" src="{% static 'image/youtube.png' %}" style="opacity: 1;">
+						</a>
+					</div>
+					
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="with-sidebar-wrapper">
+			<div class="with-sidebar-container container">
+				<div class="with-sidebar-left eight columns">
+					<div class="with-sidebar-content twelve columns">
+						<div class="gdlr-soccer-single-player gdlr-item gdlr-item-start-content">
+
+							<!-- player stats -->
+							<div data-tab="player-stats" class="gdlr-soccer-tab-content active">
+								<ul class="gdlr-soccer-tab-player-info">
+									<li><span class="gdlr-soccer-head">{{player.position}}</span><span class="gdlr-soccer-tail">Position</span></li><li><span class="gdlr-soccer-head">19</span><span class="gdlr-soccer-tail">Games Played</span></li><li><span class="gdlr-soccer-head">534</span><span class="gdlr-soccer-tail">Minutes Played</span></li><li><span class="gdlr-soccer-head">15</span><span class="gdlr-soccer-tail">Starts</span></li><li><span class="gdlr-soccer-head">4</span><span class="gdlr-soccer-tail">Substitution On</span></li><li><span class="gdlr-soccer-head">2</span><span class="gdlr-soccer-tail">Substitution Off</span></li>							</ul>
+
+									<div class="gdlr-soccer-single-player-stats">
+										<div class="gdlr-soccer-single-player-stats-tab gdlr-item gdlr-title-font">
+											<a data-tab="biography" href="#" class="gdlr-soccer-tab">Biography</a>  
+										</div>
+
+										<div data-tab="biography" class="gdlr-soccer-tab-content active"
+										><h3>Your Biography comes here</h3>
+										<p>{{ palyer.about }}</p>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+
+				<div class="clear"></div>
+			</div>				
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block mobile_navigation %}
+<div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation" >
+  <button class="dl-trigger">Open Menu</button>
+  <ul id="menu-main-menu" class="dl-menu gdlr-main-mobile-menu">
+    <li id="menu-item-3543" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543"><a href="{% url 'core_index' %}">Home</a></li>
+    <li id="menu-item-3435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435">
+      <a href="{% url 'gallery' %}">Gallery</a></li>
+      <li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="{% url 'fixture-result' %}">Fixtures &#038; Results</a></li>
+      <li id="menu-item-3541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3541"><a href="{% url 'league-table' %}">League Table</a></li>
+      <li id="menu-item-3540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3540">
+        <li id="menu-item-3534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534"><a href="{% url 'team' %}">Team</a>
+          <ul class="dl-submenu">
+            <li id="menu-item-3419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3419"><a href="{% url 'team' %}">Goalkeeper</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.0 %}
+                <li id="menu-item-3468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3420"><a href="{% url 'defender' %}">Defenders</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.1 %}
+                <li id="menu-item-3459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3421"><a href="{% url 'midfielder' %}">Midfielders</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.2 %}
+                <li id="menu-item-3461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li id="menu-item-3428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3428"><a href="{% url 'striker' %}">Strikers</a>
+              <ul class="dl-submenu">
+                {% for player in players_by_group.3 %}
+                <li id="menu-item-3532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3532"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </li>
+      <li id="menu-item-3534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534">
+        <a href="{% url 'news-all' %}">News</a></li>      
+        <li id="menu-item-3513" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513">
+          <a href="{% url 'contact-us' %}">Contact Us</a>
+        </li>
+        <li id="menu-item-3558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558">
+          <a href="">Shop</a>
+          <ul class="dl-submenu">
+            <li id="menu-item-3515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3515"><a href="">Coming Soon</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    {% endblock %}
+
+    {% block navigation %}
+    <!-- navigation -->
+    <div class="gdlr-navigation-wrapper">
+      <div class="gdlr-navigation-container container">
+        <nav class="gdlr-navigation" id="gdlr-main-navigation" role="navigation">
+          <ul id="menu-main-menu-1" class="sf-menu gdlr-main-menu">
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3220 current_page_item menu-item-3543 gdlr-normal-menu"><a href="{% url 'core_index'%}">Home</a></li>
+            <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3435 gdlr-normal-menu">
+              <a href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542menu-item menu-item-type-post_type menu-item-object-page menu-item-3542 gdlr-normal-menu"><a href="{% url 'fixture-result'%}">Fixtures &#038; Results</a></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3541menu-item menu-item-type-post_type menu-item-object-page menu-item-3541 gdlr-normal-menu"><a href="{% url 'league-table' %}">League Table</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu"><a href="{% url 'team' %}" class="sf-with-ul">Team</a><div class="sf-mega" style="display: none;">
+
+              <div class="sf-mega-section three columns first-column" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3419" style="height: 198px;"><a href="{% url 'team' %}">Goalkeepers</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.0 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3468"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3420" style="height: 198px;"><a href="{% url 'defender' %}">Defenders</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.1 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3421" style="height: 198px;"><a href="{% url 'midfielder' %}">Midfielders</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.2 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3461"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+              <div class="sf-mega-section three columns" data-size="1/4" data-row="1"><div class="sf-mega-section-inner menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3428" style="height: 198px;"><a href="{% url 'striker' %}">Strikers</a>
+                <ul class="sub-menu">
+                  {% for player in players_by_group.3 %}
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3532"><a href="{% url 'user_details' player.id %}">{{ player.jersey_number}}&nbsp;{{ player.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div></div>
+
+            </div></li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3534 gdlr-mega-menu">
+              <a href="{% url 'news-all' %}">News</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3513 gdlr-mega-menu">
+              <a href="{% url 'contact-us' %}">Contact US</a>
+            </li>
+            <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3558 gdlr-normal-menu">
+              <a href="#">Shop</a>
+              <ul class="sub-menu">
+                <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3515"><a href="#">Coming Soon</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <i class="icon-search gdlr-menu-search-button" id="gdlr-menu-search-button" ></i>
+        <div class="gdlr-menu-search" id="gdlr-menu-search">
+          <form method="get" id="searchform" action="#">
+            <div class="search-text">
+              <input type="text" value="Type Keywords" name="s" autocomplete="off" data-default="Type Keywords" />
+            </div>
+            <input type="submit" value="" />
+            <div class="clear"></div>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    {% endblock %}
